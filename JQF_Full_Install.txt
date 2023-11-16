@@ -1,0 +1,404 @@
+anima@Ayame:~/cs182/project3$ git clone https://github.com/rohanpadhye/jqf && jqf/setup.sh
+Cloning into 'jqf'...
+remote: Enumerating objects: 19715, done.
+remote: Counting objects: 100% (2956/2956), done.
+remote: Compressing objects: 100% (631/631), done.
+remote: Total 19715 (delta 2278), reused 2664 (delta 2111), pack-reused 16759
+Receiving objects: 100% (19715/19715), 5.64 MiB | 2.93 MiB/s, done.
+Resolving deltas: 100% (12065/12065), done.
+cc  fuzz/src/main/c/afl-proxy.c -o bin/afl-proxy
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO]
+[INFO] jqf                                                                [pom]
+[INFO] jqf-instrument                                                     [jar]
+[INFO] jqf-fuzz                                                           [jar]
+[INFO] jqf-maven-plugin                                          [maven-plugin]
+[INFO] jqf-examples                                                       [jar]
+[INFO]
+[INFO] ----------------------< edu.berkeley.cs.jqf:jqf >-----------------------
+[INFO] Building jqf 2.1-SNAPSHOT                                          [1/5]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO]
+[INFO] -----------------< edu.berkeley.cs.jqf:jqf-instrument >-----------------
+[INFO] Building jqf-instrument 2.1-SNAPSHOT                               [2/5]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) @ jqf-instrument ---
+[INFO] skip non existing resourceDirectory /home/anima/cs182/project3/jqf/instrument/src/main/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.11.0:compile (default-compile) @ jqf-instrument ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 217 source files with javac [debug release 9] to target/classes
+[INFO] /home/anima/cs182/project3/jqf/instrument/src/main/java/edu/berkeley/cs/jqf/instrument/util/DoublyLinkedList.java: /home/anima/cs182/project3/jqf/instrument/src/main/java/edu/berkeley/cs/jqf/instrument/util/DoublyLinkedList.java uses unchecked or unsafe operations.
+[INFO] /home/anima/cs182/project3/jqf/instrument/src/main/java/edu/berkeley/cs/jqf/instrument/util/DoublyLinkedList.java: Recompile with -Xlint:unchecked for details.
+[INFO]
+[INFO] --- maven-resources-plugin:3.3.1:testResources (default-testResources) @ jqf-instrument ---
+[INFO] skip non existing resourceDirectory /home/anima/cs182/project3/jqf/instrument/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.11.0:testCompile (default-testCompile) @ jqf-instrument ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 11 source files with javac [debug release 9] to target/test-classes
+[INFO]
+[INFO] --- maven-surefire-plugin:3.1.0:test (default-test) @ jqf-instrument ---
+[INFO]
+[INFO] --- maven-jar-plugin:3.3.0:jar (default-jar) @ jqf-instrument ---
+[INFO] Building jar: /home/anima/cs182/project3/jqf/instrument/target/jqf-instrument-2.1-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-dependency-plugin:3.5.0:copy-dependencies (copy-dependencies) @ jqf-instrument ---
+[INFO] Copying asm-9.5.jar to /home/anima/cs182/project3/jqf/instrument/target/dependency/asm-9.5.jar
+[INFO]
+[INFO] --------------------< edu.berkeley.cs.jqf:jqf-fuzz >--------------------
+[INFO] Building jqf-fuzz 2.1-SNAPSHOT                                     [3/5]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) @ jqf-fuzz ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO]
+[INFO] --- maven-compiler-plugin:3.11.0:compile (default-compile) @ jqf-fuzz ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 54 source files with javac [debug release 9] to target/classes
+[INFO] /home/anima/cs182/project3/jqf/fuzz/src/main/java/edu/berkeley/cs/jqf/fuzz/afl/AFLGuidance.java: /home/anima/cs182/project3/jqf/fuzz/src/main/java/edu/berkeley/cs/jqf/fuzz/afl/AFLGuidance.java uses or overrides a deprecated API.
+[INFO] /home/anima/cs182/project3/jqf/fuzz/src/main/java/edu/berkeley/cs/jqf/fuzz/afl/AFLGuidance.java: Recompile with -Xlint:deprecation for details.
+[INFO] /home/anima/cs182/project3/jqf/fuzz/src/main/java/edu/berkeley/cs/jqf/fuzz/repro/ReproGuidance.java: /home/anima/cs182/project3/jqf/fuzz/src/main/java/edu/berkeley/cs/jqf/fuzz/repro/ReproGuidance.java uses unchecked or unsafe operations.
+[INFO] /home/anima/cs182/project3/jqf/fuzz/src/main/java/edu/berkeley/cs/jqf/fuzz/repro/ReproGuidance.java: Recompile with -Xlint:unchecked for details.
+[INFO]
+[INFO] --- maven-resources-plugin:3.3.1:testResources (default-testResources) @ jqf-fuzz ---
+[INFO] skip non existing resourceDirectory /home/anima/cs182/project3/jqf/fuzz/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.11.0:testCompile (default-testCompile) @ jqf-fuzz ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 7 source files with javac [debug release 9] to target/test-classes
+[INFO] /home/anima/cs182/project3/jqf/fuzz/src/test/java/edu/berkeley/cs/jqf/fuzz/util/CountersTest.java: Some input files use or override a deprecated API.
+[INFO] /home/anima/cs182/project3/jqf/fuzz/src/test/java/edu/berkeley/cs/jqf/fuzz/util/CountersTest.java: Recompile with -Xlint:deprecation for details.
+[INFO]
+[INFO] --- maven-surefire-plugin:3.1.0:test (default-test) @ jqf-fuzz ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junit4.JUnit4Provider
+[INFO]
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running edu.berkeley.cs.jqf.fuzz.ei.ExecutionIndexingGuidanceTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.348 s - in edu.berkeley.cs.jqf.fuzz.ei.ExecutionIndexingGuidanceTest
+[INFO] Running edu.berkeley.cs.jqf.fuzz.ei.ExecutionIndexingTest
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.45 s - in edu.berkeley.cs.jqf.fuzz.ei.ExecutionIndexingTest
+[INFO] Running edu.berkeley.cs.jqf.fuzz.util.NonZeroCachingCountersTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.193 s - in edu.berkeley.cs.jqf.fuzz.util.NonZeroCachingCountersTest
+[INFO] Running edu.berkeley.cs.jqf.fuzz.util.CoverageTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in edu.berkeley.cs.jqf.fuzz.util.CoverageTest
+[INFO] Running edu.berkeley.cs.jqf.fuzz.util.CountersTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.111 s - in edu.berkeley.cs.jqf.fuzz.util.CountersTest
+[INFO] Running edu.berkeley.cs.jqf.fuzz.afl.RedundancyTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 s - in edu.berkeley.cs.jqf.fuzz.afl.RedundancyTest
+[INFO] Running edu.berkeley.cs.jqf.fuzz.guidance.GuidanceTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.219 s - in edu.berkeley.cs.jqf.fuzz.guidance.GuidanceTest
+[INFO]
+[INFO] Results:
+[INFO]
+[INFO] Tests run: 49, Failures: 0, Errors: 0, Skipped: 0
+[INFO]
+[INFO]
+[INFO] --- maven-jar-plugin:3.3.0:jar (default-jar) @ jqf-fuzz ---
+[INFO] Building jar: /home/anima/cs182/project3/jqf/fuzz/target/jqf-fuzz-2.1-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-dependency-plugin:3.5.0:copy-dependencies (copy-dependencies) @ jqf-fuzz ---
+[INFO] Copying junit-4.13.1.jar to /home/anima/cs182/project3/jqf/fuzz/target/dependency/junit-4.13.1.jar
+[INFO] Copying hamcrest-core-1.3.jar to /home/anima/cs182/project3/jqf/fuzz/target/dependency/hamcrest-core-1.3.jar
+[INFO] Copying junit-quickcheck-generators-1.0.jar to /home/anima/cs182/project3/jqf/fuzz/target/dependency/junit-quickcheck-generators-1.0.jar
+[INFO] Copying junit-quickcheck-core-1.0.jar to /home/anima/cs182/project3/jqf/fuzz/target/dependency/junit-quickcheck-core-1.0.jar
+[INFO] Copying javaruntype-1.3.jar to /home/anima/cs182/project3/jqf/fuzz/target/dependency/javaruntype-1.3.jar
+[INFO] Copying antlr-runtime-3.1.2.jar to /home/anima/cs182/project3/jqf/fuzz/target/dependency/antlr-runtime-3.1.2.jar
+[INFO] Copying ognl-3.1.12.jar to /home/anima/cs182/project3/jqf/fuzz/target/dependency/ognl-3.1.12.jar
+[INFO] Copying javassist-3.20.0-GA.jar to /home/anima/cs182/project3/jqf/fuzz/target/dependency/javassist-3.20.0-GA.jar
+[INFO] Copying generics-resolver-3.0.1.jar to /home/anima/cs182/project3/jqf/fuzz/target/dependency/generics-resolver-3.0.1.jar
+[INFO] Copying slf4j-api-1.7.25.jar to /home/anima/cs182/project3/jqf/fuzz/target/dependency/slf4j-api-1.7.25.jar
+[INFO] Copying org.jacoco.report-0.8.10.jar to /home/anima/cs182/project3/jqf/fuzz/target/dependency/org.jacoco.report-0.8.10.jar
+[INFO] Copying org.jacoco.core-0.8.10.jar to /home/anima/cs182/project3/jqf/fuzz/target/dependency/org.jacoco.core-0.8.10.jar
+[INFO] Copying asm-commons-9.5.jar to /home/anima/cs182/project3/jqf/fuzz/target/dependency/asm-commons-9.5.jar
+[INFO] Copying asm-tree-9.5.jar to /home/anima/cs182/project3/jqf/fuzz/target/dependency/asm-tree-9.5.jar
+[INFO] Copying picocli-4.0.4.jar to /home/anima/cs182/project3/jqf/fuzz/target/dependency/picocli-4.0.4.jar
+[INFO] Copying eclipse-collections-10.4.0.jar to /home/anima/cs182/project3/jqf/fuzz/target/dependency/eclipse-collections-10.4.0.jar
+[INFO] Copying eclipse-collections-api-10.4.0.jar to /home/anima/cs182/project3/jqf/fuzz/target/dependency/eclipse-collections-api-10.4.0.jar
+[INFO]
+[INFO] --- maven-assembly-plugin:3.1.1:single (make-assembly) @ jqf-fuzz ---
+[INFO] Reading assembly descriptor: src/main/assembly/assembly.xml
+[INFO] Building jar: /home/anima/cs182/project3/jqf/fuzz/target/jqf-fuzz-2.1-SNAPSHOT-zest-cli.jar
+[INFO]
+[INFO] ----------------< edu.berkeley.cs.jqf:jqf-maven-plugin >----------------
+[INFO] Building jqf-maven-plugin 2.1-SNAPSHOT                             [4/5]
+[INFO] ----------------------------[ maven-plugin ]----------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) @ jqf-maven-plugin ---
+[INFO] skip non existing resourceDirectory /home/anima/cs182/project3/jqf/maven-plugin/src/main/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.11.0:compile (default-compile) @ jqf-maven-plugin ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 2 source files with javac [debug release 9] to target/classes
+[INFO]
+[INFO] --- maven-plugin-plugin:3.5.1:descriptor (default-descriptor) @ jqf-maven-plugin ---
+[INFO] Using 'UTF-8' encoding to read mojo source files.
+[INFO] java-javadoc mojo extractor found 0 mojo descriptor.
+[INFO] java-annotations mojo extractor found 2 mojo descriptors.
+[INFO]
+[INFO] --- maven-resources-plugin:3.3.1:testResources (default-testResources) @ jqf-maven-plugin ---
+[INFO] skip non existing resourceDirectory /home/anima/cs182/project3/jqf/maven-plugin/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.11.0:testCompile (default-testCompile) @ jqf-maven-plugin ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:3.1.0:test (default-test) @ jqf-maven-plugin ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:3.3.0:jar (default-jar) @ jqf-maven-plugin ---
+[INFO] Building jar: /home/anima/cs182/project3/jqf/maven-plugin/target/jqf-maven-plugin-2.1-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-plugin-plugin:3.5.1:addPluginArtifactMetadata (default-addPluginArtifactMetadata) @ jqf-maven-plugin ---
+[INFO]
+[INFO] ------------------< edu.berkeley.cs.jqf:jqf-examples >------------------
+[INFO] Building jqf-examples 2.1-SNAPSHOT                                 [5/5]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) @ jqf-examples ---
+[INFO] skip non existing resourceDirectory /home/anima/cs182/project3/jqf/examples/src/main/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.11.0:compile (default-compile) @ jqf-examples ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 35 source files with javac [debug release 9] to target/classes
+[INFO] /home/anima/cs182/project3/jqf/examples/src/main/java/edu/berkeley/cs/jqf/examples/bcel/JavaClassGenerator.java: /home/anima/cs182/project3/jqf/examples/src/main/java/edu/berkeley/cs/jqf/examples/bcel/JavaClassGenerator.java uses or overrides a deprecated API.
+[INFO] /home/anima/cs182/project3/jqf/examples/src/main/java/edu/berkeley/cs/jqf/examples/bcel/JavaClassGenerator.java: Recompile with -Xlint:deprecation for details.
+[INFO] /home/anima/cs182/project3/jqf/examples/src/main/java/edu/berkeley/cs/jqf/examples/jgrapht/FastGnmRandomGraphGenerator.java: Some input files use unchecked or unsafe operations.
+[INFO] /home/anima/cs182/project3/jqf/examples/src/main/java/edu/berkeley/cs/jqf/examples/jgrapht/FastGnmRandomGraphGenerator.java: Recompile with -Xlint:unchecked for details.
+[INFO]
+[INFO] --- maven-resources-plugin:3.3.1:testResources (default-testResources) @ jqf-examples ---
+[INFO] Copying 10 resources from src/test/resources to target/test-classes
+[INFO]
+[INFO] --- maven-compiler-plugin:3.11.0:testCompile (default-testCompile) @ jqf-examples ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 49 source files with javac [debug release 9] to target/test-classes
+[INFO] /home/anima/cs182/project3/jqf/examples/src/test/java/edu/berkeley/cs/jqf/examples/guava/CacheEvictionTest.java: Some input files use or override a deprecated API.
+[INFO] /home/anima/cs182/project3/jqf/examples/src/test/java/edu/berkeley/cs/jqf/examples/guava/CacheEvictionTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] /home/anima/cs182/project3/jqf/examples/src/test/java/edu/berkeley/cs/jqf/examples/jgrapht/ShortestPathTest.java: Some input files use unchecked or unsafe operations.
+[INFO] /home/anima/cs182/project3/jqf/examples/src/test/java/edu/berkeley/cs/jqf/examples/jgrapht/ShortestPathTest.java: Recompile with -Xlint:unchecked for details.
+[INFO]
+[INFO] --- maven-surefire-plugin:3.1.0:test (default-test) @ jqf-examples ---
+[INFO] Tests are skipped.
+[INFO]
+[INFO] --- maven-resources-plugin:3.3.1:copy-resources (copy-seeds) @ jqf-examples ---
+[INFO] Copying 40 resources from src/test/seeds to target/seeds
+[INFO]
+[INFO] --- maven-jar-plugin:3.3.0:jar (default-jar) @ jqf-examples ---
+[INFO] Building jar: /home/anima/cs182/project3/jqf/examples/target/jqf-examples-2.1-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-dependency-plugin:3.5.0:copy-dependencies (copy-dependencies) @ jqf-examples ---
+[INFO] Copying junit-quickcheck-core-1.0.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/junit-quickcheck-core-1.0.jar
+[INFO] Copying junit-4.13.1.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/junit-4.13.1.jar
+[INFO] Copying hamcrest-core-1.3.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/hamcrest-core-1.3.jar
+[INFO] Copying javaruntype-1.3.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/javaruntype-1.3.jar
+[INFO] Copying antlr-runtime-3.1.2.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/antlr-runtime-3.1.2.jar
+[INFO] Copying ognl-3.1.12.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/ognl-3.1.12.jar
+[INFO] Copying javassist-3.20.0-GA.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/javassist-3.20.0-GA.jar
+[INFO] Copying generics-resolver-3.0.1.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/generics-resolver-3.0.1.jar
+[INFO] Copying slf4j-api-1.7.25.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/slf4j-api-1.7.25.jar
+[INFO] Copying junit-quickcheck-generators-1.0.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/junit-quickcheck-generators-1.0.jar
+[INFO] Copying jgrapht-core-1.0.1.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/jgrapht-core-1.0.1.jar
+[INFO] Copying jgrapht-ext-1.0.1.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/jgrapht-ext-1.0.1.jar
+[INFO] Copying jgraphx-2.0.0.1.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/jgraphx-2.0.0.1.jar
+[INFO] Copying jgraph-5.13.0.0.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/jgraph-5.13.0.0.jar
+[INFO] Copying antlr4-runtime-4.5.3.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/antlr4-runtime-4.5.3.jar
+[INFO] Copying commons-compress-1.21.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/commons-compress-1.21.jar
+[INFO] Copying commons-collections4-4.3.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/commons-collections4-4.3.jar
+[INFO] Copying commons-lang3-3.7.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/commons-lang3-3.7.jar
+[INFO] Copying commons-math3-3.6.1.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/commons-math3-3.6.1.jar
+[INFO] Copying jqf-fuzz-2.1-SNAPSHOT.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/jqf-fuzz-2.1-SNAPSHOT.jar
+[INFO] Copying jqf-instrument-2.1-SNAPSHOT.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/jqf-instrument-2.1-SNAPSHOT.jar
+[INFO] Copying org.jacoco.report-0.8.10.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/org.jacoco.report-0.8.10.jar
+[INFO] Copying org.jacoco.core-0.8.10.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/org.jacoco.core-0.8.10.jar
+[INFO] Copying asm-commons-9.5.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/asm-commons-9.5.jar
+[INFO] Copying asm-tree-9.5.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/asm-tree-9.5.jar
+[INFO] Copying picocli-4.0.4.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/picocli-4.0.4.jar
+[INFO] Copying eclipse-collections-10.4.0.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/eclipse-collections-10.4.0.jar
+[INFO] Copying eclipse-collections-api-10.4.0.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/eclipse-collections-api-10.4.0.jar
+[INFO] Copying struts2-core-2.5.30.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/struts2-core-2.5.30.jar
+[INFO] Copying freemarker-2.3.31.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/freemarker-2.3.31.jar
+[INFO] Copying log4j-api-2.12.4.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/log4j-api-2.12.4.jar
+[INFO] Copying commons-fileupload-1.4.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/commons-fileupload-1.4.jar
+[INFO] Copying commons-io-2.6.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/commons-io-2.6.jar
+[INFO] Copying tomcat-coyote-9.0.1.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/tomcat-coyote-9.0.1.jar
+[INFO] Copying tomcat-servlet-api-9.0.1.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/tomcat-servlet-api-9.0.1.jar
+[INFO] Copying tomcat-jni-9.0.1.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/tomcat-jni-9.0.1.jar
+[INFO] Copying tomcat-juli-9.0.1.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/tomcat-juli-9.0.1.jar
+[INFO] Copying tomcat-util-9.0.1.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/tomcat-util-9.0.1.jar
+[INFO] Copying tomcat-catalina-9.0.72.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/tomcat-catalina-9.0.72.jar
+[INFO] Copying tomcat-jsp-api-9.0.72.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/tomcat-jsp-api-9.0.72.jar
+[INFO] Copying tomcat-el-api-9.0.72.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/tomcat-el-api-9.0.72.jar
+[INFO] Copying tomcat-annotations-api-9.0.72.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/tomcat-annotations-api-9.0.72.jar
+[INFO] Copying tomcat-api-9.0.72.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/tomcat-api-9.0.72.jar
+[INFO] Copying tomcat-util-scan-9.0.72.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/tomcat-util-scan-9.0.72.jar
+[INFO] Copying tomcat-jaspic-api-9.0.72.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/tomcat-jaspic-api-9.0.72.jar
+[INFO] Copying maven-model-builder-3.5.2.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/maven-model-builder-3.5.2.jar
+[INFO] Copying plexus-utils-3.1.0.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/plexus-utils-3.1.0.jar
+[INFO] Copying plexus-interpolation-1.24.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/plexus-interpolation-1.24.jar
+[INFO] Copying plexus-component-annotations-1.7.1.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/plexus-component-annotations-1.7.1.jar
+[INFO] Copying maven-model-3.5.2.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/maven-model-3.5.2.jar
+[INFO] Copying maven-artifact-3.5.2.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/maven-artifact-3.5.2.jar
+[INFO] Copying maven-builder-support-3.5.2.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/maven-builder-support-3.5.2.jar
+[INFO] Copying closure-compiler-v20180204.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/closure-compiler-v20180204.jar
+[INFO] Copying closure-compiler-externs-v20180204.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/closure-compiler-externs-v20180204.jar
+[INFO] Copying args4j-2.33.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/args4j-2.33.jar
+[INFO] Copying error_prone_annotations-2.0.18.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/error_prone_annotations-2.0.18.jar
+[INFO] Copying protobuf-java-3.0.2.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/protobuf-java-3.0.2.jar
+[INFO] Copying jsr305-3.0.1.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/jsr305-3.0.1.jar
+[INFO] Copying jsinterop-annotations-1.0.0.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/jsinterop-annotations-1.0.0.jar
+[INFO] Copying rhino-1.7.8.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/rhino-1.7.8.jar
+[INFO] Copying ant-1.10.11.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/ant-1.10.11.jar
+[INFO] Copying ant-launcher-1.10.11.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/ant-launcher-1.10.11.jar
+[INFO] Copying error_prone_check_api-2.2.0.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/error_prone_check_api-2.2.0.jar
+[INFO] Copying error_prone_annotation-2.2.0.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/error_prone_annotation-2.2.0.jar
+[INFO] Copying dataflow-2.2.2.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/dataflow-2.2.2.jar
+[INFO] Copying javacutil-2.2.2.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/javacutil-2.2.2.jar
+[INFO] Copying javac-9+181-r4173-1.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/javac-9+181-r4173-1.jar
+[INFO] Copying diffutils-1.3.0.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/diffutils-1.3.0.jar
+[INFO] Copying software-and-algorithms-1.0.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/software-and-algorithms-1.0.jar
+[INFO] Copying error_prone_test_helpers-2.2.0.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/error_prone_test_helpers-2.2.0.jar
+[INFO] Copying google-java-format-1.4.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/google-java-format-1.4.jar
+[INFO] Copying javac-shaded-9-dev-r4023-3.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/javac-shaded-9-dev-r4023-3.jar
+[INFO] Copying hamcrest-library-1.3.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/hamcrest-library-1.3.jar
+[INFO] Copying truth-0.36.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/truth-0.36.jar
+[INFO] Copying jimfs-1.0.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/jimfs-1.0.jar
+[INFO] Copying compile-testing-0.15.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/compile-testing-0.15.jar
+[INFO] Copying truth-java8-extension-0.37.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/truth-java8-extension-0.37.jar
+[INFO] Copying auto-value-1.5.3.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/auto-value-1.5.3.jar
+[INFO] Copying error_prone_core-2.2.0.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/error_prone_core-2.2.0.jar
+[INFO] Copying jcip-annotations-1.0-1.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/jcip-annotations-1.0-1.jar
+[INFO] Copying pcollections-2.1.2.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/pcollections-2.1.2.jar
+[INFO] Copying auto-common-0.9.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/auto-common-0.9.jar
+[INFO] Copying jFormatString-3.0.0.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/jFormatString-3.0.0.jar
+[INFO] Copying guava-29.0-jre.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/guava-29.0-jre.jar
+[INFO] Copying failureaccess-1.0.1.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/failureaccess-1.0.1.jar
+[INFO] Copying listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar
+[INFO] Copying checker-qual-2.11.1.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/checker-qual-2.11.1.jar
+[INFO] Copying j2objc-annotations-1.3.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/j2objc-annotations-1.3.jar
+[INFO] Copying guava-testlib-24.1-jre.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/guava-testlib-24.1-jre.jar
+[INFO] Copying checker-compat-qual-2.0.0.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/checker-compat-qual-2.0.0.jar
+[INFO] Copying scalachess_2.12-8.6.8.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/scalachess_2.12-8.6.8.jar
+[INFO] Copying scala-library-2.12.4.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/scala-library-2.12.4.jar
+[INFO] Copying scala-parser-combinators_2.12-1.0.6.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/scala-parser-combinators_2.12-1.0.6.jar
+[INFO] Copying scalaz-core_2.12-7.2.15.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/scalaz-core_2.12-7.2.15.jar
+[INFO] Copying scalalib_2.12-6.6.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/scalalib_2.12-6.6.jar
+[INFO] Copying joda-time-2.9.9.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/joda-time-2.9.9.jar
+[INFO] Copying bcel-6.6.0.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/bcel-6.6.0.jar
+[INFO] Copying tika-parsers-1.18.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/tika-parsers-1.18.jar
+[INFO] Copying tika-core-1.18.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/tika-core-1.18.jar
+[INFO] Copying vorbis-java-tika-0.8.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/vorbis-java-tika-0.8.jar
+[INFO] Copying jackcess-2.1.10.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/jackcess-2.1.10.jar
+[INFO] Copying commons-lang-2.6.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/commons-lang-2.6.jar
+[INFO] Copying jackcess-encrypt-2.1.4.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/jackcess-encrypt-2.1.4.jar
+[INFO] Copying jmatio-1.2.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/jmatio-1.2.jar
+[INFO] Copying apache-mime4j-core-0.8.1.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/apache-mime4j-core-0.8.1.jar
+[INFO] Copying apache-mime4j-dom-0.8.1.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/apache-mime4j-dom-0.8.1.jar
+[INFO] Copying xz-1.8.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/xz-1.8.jar
+[INFO] Copying dec-0.1.2.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/dec-0.1.2.jar
+[INFO] Copying commons-codec-1.10.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/commons-codec-1.10.jar
+[INFO] Copying pdfbox-2.0.9.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/pdfbox-2.0.9.jar
+[INFO] Copying fontbox-2.0.9.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/fontbox-2.0.9.jar
+[INFO] Copying pdfbox-tools-2.0.9.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/pdfbox-tools-2.0.9.jar
+[INFO] Copying jempbox-1.8.13.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/jempbox-1.8.13.jar
+[INFO] Copying bcmail-jdk15on-1.54.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/bcmail-jdk15on-1.54.jar
+[INFO] Copying bcpkix-jdk15on-1.54.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/bcpkix-jdk15on-1.54.jar
+[INFO] Copying bcprov-jdk15on-1.54.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/bcprov-jdk15on-1.54.jar
+[INFO] Copying poi-3.17.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/poi-3.17.jar
+[INFO] Copying poi-scratchpad-3.17.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/poi-scratchpad-3.17.jar
+[INFO] Copying poi-ooxml-3.17.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/poi-ooxml-3.17.jar
+[INFO] Copying poi-ooxml-schemas-3.17.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/poi-ooxml-schemas-3.17.jar
+[INFO] Copying xmlbeans-2.6.0.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/xmlbeans-2.6.0.jar
+[INFO] Copying curvesapi-1.04.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/curvesapi-1.04.jar
+[INFO] Copying tagsoup-1.2.1.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/tagsoup-1.2.1.jar
+[INFO] Copying asm-9.5.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/asm-9.5.jar
+[INFO] Copying isoparser-1.1.18.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/isoparser-1.1.18.jar
+[INFO] Copying metadata-extractor-2.10.1.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/metadata-extractor-2.10.1.jar
+[INFO] Copying xmpcore-5.1.3.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/xmpcore-5.1.3.jar
+[INFO] Copying boilerpipe-1.1.0.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/boilerpipe-1.1.0.jar
+[INFO] Copying rome-1.5.1.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/rome-1.5.1.jar
+[INFO] Copying rome-utils-1.5.1.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/rome-utils-1.5.1.jar
+[INFO] Copying vorbis-java-core-0.8.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/vorbis-java-core-0.8.jar
+[INFO] Copying juniversalchardet-1.0.3.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/juniversalchardet-1.0.3.jar
+[INFO] Copying jhighlight-1.0.2.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/jhighlight-1.0.2.jar
+[INFO] Copying java-libpst-0.8.1.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/java-libpst-0.8.1.jar
+[INFO] Copying junrar-0.7.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/junrar-0.7.jar
+[INFO] Copying cxf-rt-rs-client-3.0.16.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/cxf-rt-rs-client-3.0.16.jar
+[INFO] Copying cxf-rt-transports-http-3.0.16.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/cxf-rt-transports-http-3.0.16.jar
+[INFO] Copying cxf-core-3.0.16.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/cxf-core-3.0.16.jar
+[INFO] Copying woodstox-core-asl-4.4.1.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/woodstox-core-asl-4.4.1.jar
+[INFO] Copying stax2-api-3.1.4.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/stax2-api-3.1.4.jar
+[INFO] Copying xmlschema-core-2.2.2.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/xmlschema-core-2.2.2.jar
+[INFO] Copying cxf-rt-frontend-jaxrs-3.0.16.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/cxf-rt-frontend-jaxrs-3.0.16.jar
+[INFO] Copying javax.ws.rs-api-2.0.1.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/javax.ws.rs-api-2.0.1.jar
+[INFO] Copying javax.annotation-api-1.2.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/javax.annotation-api-1.2.jar
+[INFO] Copying commons-exec-1.3.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/commons-exec-1.3.jar
+[INFO] Copying opennlp-tools-1.8.4.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/opennlp-tools-1.8.4.jar
+[INFO] Copying json-simple-1.1.1.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/json-simple-1.1.1.jar
+[INFO] Copying openjson-1.0.10.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/openjson-1.0.10.jar
+[INFO] Copying jul-to-slf4j-1.7.24.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/jul-to-slf4j-1.7.24.jar
+[INFO] Copying jcl-over-slf4j-1.7.24.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/jcl-over-slf4j-1.7.24.jar
+[INFO] Copying netcdf4-4.5.5.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/netcdf4-4.5.5.jar
+[INFO] Copying jcip-annotations-1.0.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/jcip-annotations-1.0.jar
+[INFO] Copying jna-4.1.0.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/jna-4.1.0.jar
+[INFO] Copying grib-4.5.5.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/grib-4.5.5.jar
+[INFO] Copying bzip2-0.9.1.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/bzip2-0.9.1.jar
+[INFO] Copying jsoup-1.11.2.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/jsoup-1.11.2.jar
+[INFO] Copying cdm-4.5.5.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/cdm-4.5.5.jar
+[INFO] Copying udunits-4.5.5.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/udunits-4.5.5.jar
+[INFO] Copying quartz-2.2.0.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/quartz-2.2.0.jar
+[INFO] Copying c3p0-0.9.1.1.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/c3p0-0.9.1.1.jar
+[INFO] Copying ehcache-core-2.6.2.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/ehcache-core-2.6.2.jar
+[INFO] Copying jcommander-1.35.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/jcommander-1.35.jar
+[INFO] Copying httpservices-4.5.5.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/httpservices-4.5.5.jar
+[INFO] Copying httpclient-4.5.4.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/httpclient-4.5.4.jar
+[INFO] Copying httpcore-4.4.7.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/httpcore-4.4.7.jar
+[INFO] Copying httpmime-4.5.4.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/httpmime-4.5.4.jar
+[INFO] Copying commons-csv-1.0.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/commons-csv-1.0.jar
+[INFO] Copying sis-utility-0.8.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/sis-utility-0.8.jar
+[INFO] Copying unit-api-1.0.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/unit-api-1.0.jar
+[INFO] Copying sis-netcdf-0.8.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/sis-netcdf-0.8.jar
+[INFO] Copying sis-storage-0.8.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/sis-storage-0.8.jar
+[INFO] Copying sis-feature-0.8.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/sis-feature-0.8.jar
+[INFO] Copying sis-referencing-0.8.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/sis-referencing-0.8.jar
+[INFO] Copying sis-metadata-0.8.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/sis-metadata-0.8.jar
+[INFO] Copying geoapi-3.0.1.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/geoapi-3.0.1.jar
+[INFO] Copying sentiment-analysis-parser-0.1.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/sentiment-analysis-parser-0.1.jar
+[INFO] Copying uimafit-core-2.2.0.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/uimafit-core-2.2.0.jar
+[INFO] Copying commons-logging-api-1.1.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/commons-logging-api-1.1.jar
+[INFO] Copying spring-core-3.2.16.RELEASE.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/spring-core-3.2.16.RELEASE.jar
+[INFO] Copying commons-logging-1.1.3.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/commons-logging-1.1.3.jar
+[INFO] Copying spring-context-3.2.16.RELEASE.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/spring-context-3.2.16.RELEASE.jar
+[INFO] Copying spring-aop-3.2.16.RELEASE.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/spring-aop-3.2.16.RELEASE.jar
+[INFO] Copying aopalliance-1.0.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/aopalliance-1.0.jar
+[INFO] Copying spring-expression-3.2.16.RELEASE.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/spring-expression-3.2.16.RELEASE.jar
+[INFO] Copying spring-beans-3.2.16.RELEASE.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/spring-beans-3.2.16.RELEASE.jar
+[INFO] Copying uimaj-core-2.9.0.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/uimaj-core-2.9.0.jar
+[INFO] Copying jdom2-2.0.6.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/jdom2-2.0.6.jar
+[INFO] Copying jbig2-imageio-3.0.0.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/jbig2-imageio-3.0.0.jar
+[INFO] Copying jai-imageio-core-1.3.1.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/jai-imageio-core-1.3.1.jar
+[INFO] Copying gson-2.8.9.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/gson-2.8.9.jar
+[INFO] Copying jackson-core-2.13.0.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/jackson-core-2.13.0.jar
+[INFO] Copying jackson-databind-2.13.4.2.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/jackson-databind-2.13.4.2.jar
+[INFO] Copying jackson-annotations-2.13.0.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/jackson-annotations-2.13.0.jar
+[INFO] Copying chocopy-artifacts-2.2.jar to /home/anima/cs182/project3/jqf/examples/target/dependency/chocopy-artifacts-2.2.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for jqf 2.1-SNAPSHOT:
+[INFO]
+[INFO] jqf ................................................ SUCCESS [  0.003 s]
+[INFO] jqf-instrument ..................................... SUCCESS [  4.256 s]
+[INFO] jqf-fuzz ........................................... SUCCESS [  5.935 s]
+[INFO] jqf-maven-plugin ................................... SUCCESS [  1.704 s]
+[INFO] jqf-examples ....................................... SUCCESS [  2.003 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  14.071 s
+[INFO] Finished at: 2023-11-15T21:05:50-08:00
+[INFO] ------------------------------------------------------------------------
