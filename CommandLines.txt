@@ -1,0 +1,10 @@
+Linux Command
+ javac -cp .:$(/home/anima/cs182/project/jqf/scripts/classpath.sh) SimpleTest.java
+ 
+ Run jqf-random
+ /home/anima/cs182/project/jqf/bin/jqf-random -c .:$(/home/anima/cs182/project/jqf/scripts/classpath.sh) SimpleTest testSimpleTest 10
+
+/home/anima/cs182/project/jqf/bin/jqf-random -c .:$(/home/anima/cs182/project/jqf/scripts/classpath.sh) -v $JVM_OPTS -Djqf.logCoverage=true SimpleTest testSimpleTest 10
+
+ Example:
+ javac -cp .:$(jqf/scripts/classpath.sh) PngTest.java # 'jqf' is the directory where JQF is cloned/installed
