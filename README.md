@@ -2,8 +2,8 @@
 This is the CS182 Project for UCR, we have chosen to do project 1. We will use JQF in the duration of the project.
 
 Project Members:
-Mihika Nerurkar
-Orion Orona
+Mihika Nerurkar,
+Orion Orona,
 Calvin Trujillo Gaytan
 
 # Section 1
